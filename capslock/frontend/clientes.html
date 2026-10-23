@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | CapsLock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>CapsLock</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="cadastrar-os.html">Cadastrar OS</a>
+            <a href="consultar-os.html">Consultar OS</a>
+            <a href="tecnicos.html">Técnicos</a>
+            <a class="ativo" href="clientes.html">Clientes</a>
+            <a href="suporte.html">Suporte</a>
+            <a href="index.html">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Gerenciamento de clientes</h2>
+        <p class="subtitulo">
+            Cadastre e gerencie os clientes da empresa.
+        </p>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <form id="formCliente">
+            <input type="hidden" id="clienteId">
+
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input id="nome" placeholder="Nome do cliente" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Email do cliente" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input id="telefone" placeholder="Telefone para contato">
+            </div>
+
+            <button id="salvarCliente" type="submit">
+                Cadastrar cliente
+            </button>
+        </form>
+
+        <h2 style="margin-top: 30px;">Clientes cadastrados</h2>
+        <div id="listaClientes">Carregando clientes...</div>
+    </main>
+
+    <footer class="rodape">
+        CapsLock — Sistema de gerenciamento de ordens de serviço
+    </footer>
+</body>
+</html>

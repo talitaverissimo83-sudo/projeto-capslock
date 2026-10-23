@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar OS | CapsLock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>CapsLock</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a class="ativo" href="cadastrar-os.html">Cadastrar OS</a>
+            <a href="consultar-os.html">Consultar OS</a>
+            <a href="tecnicos.html">Técnicos</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="suporte.html">Suporte</a>
+            <a href="index.html">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastrar ordem de serviço</h2>
+        <p class="subtitulo">
+            Preencha os dados para registrar um serviço.
+        </p>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <form id="formOS">
+            <div class="campo">
+                <input
+                    id="titulo"
+                    placeholder="Título da OS"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <textarea
+                    id="descricao"
+                    placeholder="Descreva o problema ou serviço necessário"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="campo">
+                <input
+                    id="equipamento"
+                    placeholder="Equipamento"
+                >
+            </div>
+
+            <div class="campo">
+                <select id="cliente_id" required>
+                    <option value="">Carregando clientes...</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <select id="tecnico_id">
+                    <option value="">Sem técnico designado</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <select id="status">
+                    <option value="Aberta">Aberta</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluída">Concluída</option>
+                    <option value="Cancelada">Cancelada</option>
+                </select>
+            </div>
+
+            <button type="submit">Salvar OS</button>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        CapsLock — Sistema de gerenciamento de ordens de serviço
+    </footer>
+</body>
+</html>

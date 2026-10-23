@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicos | CapsLock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>CapsLock</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="cadastrar-os.html">Cadastrar OS</a>
+            <a href="consultar-os.html">Consultar OS</a>
+            <a class="ativo" href="tecnicos.html">Técnicos</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="suporte.html">Suporte</a>
+            <a href="index.html">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Gerenciamento de técnicos</h2>
+        <p class="subtitulo">
+            Cadastre e gerencie os técnicos responsáveis pelos serviços.
+        </p>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <form id="formTecnico">
+            <input type="hidden" id="tecnicoId">
+
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input id="nome" placeholder="Nome do técnico" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Email do técnico" required>
+            </div>
+
+            <div class="campo">
+                <label for="especialidade">Especialidade</label>
+                <input id="especialidade" placeholder="Ex.: Eletrônica" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input id="telefone" placeholder="Telefone para contato">
+            </div>
+
+            <button id="salvarTecnico" type="submit">
+                Cadastrar técnico
+            </button>
+        </form>
+
+        <h2 style="margin-top: 30px;">Técnicos cadastrados</h2>
+        <div id="listaTecnicos">Carregando técnicos...</div>
+    </main>
+
+    <footer class="rodape">
+        CapsLock — Sistema de gerenciamento de ordens de serviço
+    </footer>
+</body>
+</html>
