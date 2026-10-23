@@ -7,12 +7,12 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #fff7fb;
-    color: #392735;
+    color: #a8248c;
 }
 
 header {
-    background: #e879b5;
-    color: white;
+    background: #f8b7e3;
+    color: rgb(233, 221, 170);
     padding: 18px 5%;
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,7 @@ h3 {
 .cartao,
 .painel,
 form {
-    background: white;
+    background: rgb(255, 239, 195);
     border: 1px solid #f2c8df;
     border-radius: 14px;
     padding: 20px;
@@ -120,8 +120,8 @@ textarea {
 input:focus,
 textarea:focus,
 select:focus {
-    outline: 2px solid #e9a4cb;
-    border-color: #c94b91;
+    outline: 2px solid #86df83;
+    border-color: #2f4bca;
 }
 
 button,
@@ -176,8 +176,8 @@ td {
 }
 
 th {
-    background: #fce7f3;
-    color: #7d2858;
+    background: #cafbfd;
+    color: #284a7d;
 }
 
 .status {
@@ -213,11 +213,9 @@ th {
     display: grid;
     place-items: center;
     padding: 20px;
-    background: linear-gradient(
-        135deg,
-        #f8c8e2,
-        #fff1f8,
-        #fce0ee
+    background:(
+        #fcefcb,
+       
     );
 }
 
@@ -225,9 +223,9 @@ th {
     width: 100%;
     max-width: 420px;
     padding: 35px;
-    background: white;
+    background: #FCE5EC;
     border-radius: 18px;
-    box-shadow: 0 8px 25px #a43d761f;
+    
 }
 
 .login-caixa h1 {
@@ -296,4 +294,10 @@ th {
     .login-caixa {
         padding: 25px;
     }
+}
+ 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
