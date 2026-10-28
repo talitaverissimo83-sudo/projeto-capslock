@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | CapsLock</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+
     <header>
-        <h1>CapsLock</h1>
+        <h1>CapsLock♡</h1>
+
         <nav>
-            <a class="ativo" href="dashboard.html">Dashboard</a>
+            <a class="ativo" href="dashboard.html">Início</a>
             <a href="cadastrar-os.html">Cadastrar OS</a>
             <a href="consultar-os.html">Consultar OS</a>
             <a href="tecnicos.html">Técnicos</a>
@@ -23,48 +26,77 @@
     </header>
 
     <main>
-        <h2>Dashboard</h2>
-        <p class="subtitulo">
-            Acompanhe as ordens de serviço da empresa.
-        </p>
+        <section class="boas-vindas">
+            <h2>Bem-vindo à<br> página CapsLock</h2>
+            <p>
+                Aqui você pode gerenciar as ordens de serviço,
+                técnicos, clientes e acompanhar todo o processo
+                de atendimento.
+            </p>
+        </section>
 
         <div id="mensagem" class="mensagem"></div>
 
         <section class="cartoes">
             <div class="cartao">
-                <p>Total de OS 📄</p>
+                <p>Total de OS</p>
                 <p class="numero" id="totalOS">0</p>
             </div>
 
             <div class="cartao">
-                <p>OS abertas 🔓</p>
-                <p class="numero" id="abertas">0</p>
-            </div>
-
-            <div class="cartao">
-                <p>Em andamento ⌚</p>
+                <p>Em andamento</p>
                 <p class="numero" id="andamento">0</p>
             </div>
 
             <div class="cartao">
-                <p>Concluídas ✅</p>
+                <p>Concluídas</p>
                 <p class="numero" id="concluidas">0</p>
+            </div>
+
+            <div class="cartao">
+                <p>Aguardando</p>
+                <p class="numero" id="abertas">0</p>
             </div>
         </section>
 
-        <div class="acoes">
-            <a class="botao" href="cadastrar-os.html">
-                Cadastrar nova OS
-            </a>
+        <section class="acessos-rapidos">
+            <h3>Acesso Rápido</h3>
 
-            <a class="botao botao-secundario" href="consultar-os.html">
-                Consultar OS
-            </a>
-        </div>
+            <div class="acessos-grid">
+                <a class="acesso-card" href="cadastrar-os.html">
+                    <span class="acesso-icone">▤</span>
+                    <span class="acesso-titulo">
+                        Cadastrar ordem de serviço
+                    </span>
+                </a>
+
+                <a class="acesso-card" href="consultar-os.html">
+                    <span class="acesso-icone">☷</span>
+                    <span class="acesso-titulo">
+                        Consultar ordens de serviço
+                    </span>
+                </a>
+
+                <a class="acesso-card" href="tecnicos.html">
+                    <span class="acesso-icone">♙</span>
+                    <span class="acesso-titulo">
+                        Gerenciar técnicos
+                    </span>
+                </a>
+
+                <a class="acesso-card" href="clientes.html">
+                    <span class="acesso-icone">♧</span>
+                    <span class="acesso-titulo">
+                        Gerenciar clientes
+                    </span>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer class="rodape">
         CapsLock — Sistema de gerenciamento de ordens de serviço
     </footer>
+
 </body>
 </html>
