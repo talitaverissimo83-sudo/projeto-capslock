@@ -1,181 +1,112 @@
-
-/* ============================
-   1. ESTILO GERAL
-============================ */
-
-* {
-    box-sizing: border-box;
-}
-
-:root {
-    --fundo: #11101a;
-    --painel: #1b1826;
-    --painel-claro: #252031;
-    --rosa: #e94fad;
-    --rosa-claro: #ff8dcc;
-    --texto: #f8eff7;
-    --texto-suave: #aaa2b8;
-    --borda: #342b40;
-    --verde: #75d6b0;
-    --amarelo: #f5d779;
-    --vermelho: #ff7d91;
-}
-
 body {
     margin: 0;
-    background: var(--fundo);
-    color: var(--texto);
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #11101a;
+    color: white;
 }
 
-a,
-button,
-input,
-select,
-textarea {
-    font: inherit;
-}
-
-a {
-    transition: 0.2s ease;
-}
-
-button {
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-/* ============================
-   2. CABECALHO
-============================ */
+/* CABEÇALHO */
 
 header {
+    background: #191522;
+    height: 72px;
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    height: 72px;
-    padding: 0 25px;
     display: flex;
     align-items: center;
-    background: #191522;
-    border-bottom: 1px solid var(--borda);
+    border-bottom: 1px solid #342b40;
 }
 
 header h1 {
-    width: 230px;
-    flex-shrink: 0;
-    margin: 0;
-    color: var(--rosa-claro);
+    color: #ff8dcc;
     font-size: 27px;
-    letter-spacing: -1px;
+    margin-left: 25px;
+    width: 230px;
 }
 
-header h1::after {
-    content: " ♡";
-    color: var(--rosa);
-}
-
-/* ============================
-   3. MENU LATERAL
-============================ */
+/* MENU LATERAL */
 
 nav {
+    background: #191522;
+    width: 200px;
+    height: calc(100vh - 72px);
     position: fixed;
     top: 72px;
     left: 0;
-    bottom: 0;
-    z-index: 90;
-    width: 230px;
-    padding: 24px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    overflow-y: auto;
-    background: #191522;
-    border-right: 1px solid var(--borda);
+    padding: 15px;
+    border-right: 1px solid #342b40;
 }
 
 nav a {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 13px 14px;
-    border-radius: 9px;
-    color: var(--texto-suave);
+    display: block;
+    padding: 13px;
+    margin-bottom: 8px;
+    color: #aaa2b8;
     text-decoration: none;
     font-size: 14px;
+    border-radius: 8px;
 }
 
-nav a::before {
-    display: inline-block;
-    width: 20px;
-    text-align: center;
-    color: var(--rosa-claro);
-    font-size: 18px;
-}
+/* ÍCONES DO MENU */
 
 nav a[href="dashboard.html"]::before {
-    content: "⌂";
+    content: "⌂  ";
 }
 
 nav a[href="cadastrar-os.html"]::before {
-    content: "+";
+    content: "+  ";
 }
 
 nav a[href="consultar-os.html"]::before {
-    content: "▤";
+    content: "▤  ";
 }
 
 nav a[href="tecnicos.html"]::before {
-    content: "♙";
+    content: "👩‍💻  ";
 }
 
 nav a[href="clientes.html"]::before {
-    content: "♧";
+    content: " ";
 }
 
 nav a[href="suporte.html"]::before {
-    content: "?";
+    content: "?  ";
 }
 
 nav a[href="index.html"]::before {
-    content: "⇥";
+    content: "⇥  ";
 }
 
+/* EFEITO DOS LINKS */
+
 nav a:hover {
-    color: white;
-    background: var(--painel-claro);
-    transform: translateX(3px);
+    background: #252031;
+    color: #ff8dcc;
 }
 
 nav a.ativo {
     background: #46243f;
     color: #ffb5df;
-    box-shadow: inset 3px 0 var(--rosa);
+    border-left: 3px solid #e94fad;
 }
 
-/* ============================
-   4. CONTEUDO DAS PAGINAS
-============================ */
+/* CONTEÚDO PRINCIPAL */
 
 main {
-    width: auto;
-    max-width: 1450px;
-    min-height: calc(100vh - 140px);
-    margin: 105px 35px 35px 265px;
+    margin-left: 265px;
+    margin-top: 105px;
+    margin-right: 35px;
+    min-height: 70vh;
 }
 
 h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: var(--texto);
+    color: white;
     font-size: 27px;
 }
 
 h3 {
-    color: var(--rosa-claro);
+    color: #ff8dcc;
 }
 
 p {
@@ -183,120 +114,111 @@ p {
 }
 
 .subtitulo {
-    margin-top: 0;
-    margin-bottom: 28px;
-    color: var(--texto-suave);
+    color: #aaa2b8;
     font-size: 14px;
+    margin-bottom: 25px;
 }
 
+/* TEXTO DE BOAS-VINDAS */
+
 .boas-vindas h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
+    font-size: 40px;
     font-weight: normal;
-    font-size: clamp(30px, 3vw, 43px);
     line-height: 1.2;
     color: #fff4fa;
 }
 
 .boas-vindas p {
-    max-width: 580px;
-    color: var(--texto-suave);
+    color: #aaa2b8;
     font-size: 14px;
+    max-width: 580px;
 }
 
-/* ============================
-   5. CARTOES DO DASHBOARD
-============================ */
+/* CARTÕES DO DASHBOARD */
 
 .cartoes {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 18px;
-    margin: 32px 0;
+    margin-top: 30px;
+    margin-bottom: 35px;
 }
 
 .cartao {
-    min-width: 0;
+    background: #1b1826;
     padding: 20px;
-    background: var(--painel);
-    border: 1px solid var(--borda);
-    border-top: 3px solid var(--rosa);
+    border: 1px solid #342b40;
+    border-top: 3px solid #e94fad;
     border-radius: 12px;
-    box-shadow: 0 5px 18px #00000018;
-    transition: transform 0.2s, border-color 0.2s;
 }
 
-.cartao:hover {
-    transform: translateY(-4px);
-    border-color: #70405f;
-}
+/* CORES DOS CARTÕES */
 
 .cartao:nth-child(2) {
-    border-top-color: var(--amarelo);
+    border-top-color: #f5d779;
 }
 
 .cartao:nth-child(3) {
-    border-top-color: var(--verde);
+    border-top-color: #75d6b0;
 }
 
 .cartao:nth-child(4) {
     border-top-color: #b995ff;
 }
 
+.cartao:hover {
+    background: #252031;
+}
+
 .cartao p:first-child {
-    color: var(--texto-suave);
+    color: #aaa2b8;
     font-size: 13px;
-    margin: 0;
 }
 
 .numero {
-    margin: 13px 0 0;
     color: white;
     font-size: 32px;
     font-weight: bold;
 }
 
-/* ============================
-   6. ACESSOS RAPIDOS
-============================ */
+/* ACESSO RÁPIDO */
 
 .acessos-rapidos {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .acessos-rapidos h3 {
-    margin-bottom: 18px;
+    color: #ff8dcc;
     font-size: 18px;
 }
 
 .acessos-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 190px));
+    grid-template-columns: repeat(3, 190px);
     gap: 18px;
 }
 
 .acesso-card {
-    min-height: 145px;
+    background: #1b1826;
+    border: 1px solid #342b40;
+    border-radius: 12px;
+    min-height: 120px;
     padding: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 18px;
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-    background: var(--painel);
+    color: white;
     text-decoration: none;
-    color: var(--texto);
-    transition: transform 0.2s, background 0.2s, border-color 0.2s;
 }
 
 .acesso-card:hover {
-    transform: translateY(-5px);
     background: #292033;
-    border-color: var(--rosa);
+    border-color: #e94fad;
 }
 
 .acesso-icone {
-    color: var(--rosa-claro);
+    color: #ff8dcc;
     font-size: 28px;
 }
 
@@ -305,18 +227,14 @@ p {
     line-height: 1.5;
 }
 
-/* ============================
-   7. FORMULARIOS
-============================ */
+/* FORMULÁRIOS */
 
 form {
-    width: 100%;
-    max-width: 740px;
-    padding: 25px;
-    background: var(--painel);
-    border: 1px solid var(--borda);
+    background: #1b1826;
+    border: 1px solid #342b40;
     border-radius: 12px;
-    box-shadow: 0 8px 25px #00000012;
+    padding: 25px;
+    max-width: 740px;
 }
 
 .campo {
@@ -325,23 +243,35 @@ form {
 
 .campo label {
     display: block;
-    margin-bottom: 8px;
     color: #f3b5da;
     font-size: 14px;
     font-weight: bold;
+    margin-bottom: 8px;
 }
 
 input,
 textarea,
 select {
     width: 100%;
-    padding: 13px;
-    color: var(--texto);
+    padding: 12px;
     background: #12101a;
+    color: white;
     border: 1px solid #40354c;
     border-radius: 8px;
-    outline: none;
     font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #e94fad;
 }
 
 input::placeholder,
@@ -349,351 +279,169 @@ textarea::placeholder {
     color: #84798e;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: var(--rosa);
-    box-shadow: 0 0 0 3px #e94fad20;
-}
-
-textarea {
-    min-height: 110px;
-    resize: vertical;
-}
-
-select option {
-    background: var(--painel);
-    color: var(--texto);
-}
-
-/* ============================
-   8. BOTOES E LINKS
-============================ */
+/* BOTÕES */
 
 button,
 .botao {
-    display: inline-block;
-    padding: 12px 17px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    background: var(--rosa);
+    background: #e94fad;
     color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 17px;
     font-size: 14px;
     text-decoration: none;
-    text-align: center;
     cursor: pointer;
 }
 
 button:hover,
 .botao:hover {
     background: #c93691;
-    transform: translateY(-2px);
-}
-
-button:focus-visible,
-a:focus-visible {
-    outline: 2px solid var(--rosa-claro);
-    outline-offset: 3px;
 }
 
 .botao-secundario {
     background: #353044;
-    border-color: #4d405b;
-}
-
-.botao-secundario:hover {
-    background: #49405b;
 }
 
 .botao-perigo {
     background: #8c3049;
 }
 
-.botao-perigo:hover {
-    background: #b43859;
-}
-
 .acoes {
     display: flex;
-    align-items: center;
-    gap: 9px;
     flex-wrap: wrap;
+    gap: 9px;
 }
 
-/* ============================
-   9. TABELAS
-============================ */
+/* TABELAS */
 
 .tabela-scroll {
     width: 100%;
     overflow-x: auto;
-    border: 1px solid var(--borda);
-    border-radius: 10px;
 }
 
 table {
     width: 100%;
-    margin: 0;
     border-collapse: collapse;
-    background: var(--painel);
-}
-
-th,
-td {
-    padding: 15px 13px;
-    border-bottom: 1px solid var(--borda);
-    text-align: left;
-    font-size: 13px;
+    background: #1b1826;
 }
 
 th {
     background: #292234;
     color: #f4b5dc;
-    font-weight: bold;
+}
+
+th,
+td {
+    padding: 15px 13px;
+    text-align: left;
+    border-bottom: 1px solid #342b40;
+    font-size: 13px;
 }
 
 td {
     color: #ddd3e2;
 }
 
-tbody tr {
-    transition: background 0.2s;
-}
-
 tbody tr:hover {
     background: #282132;
 }
 
-tbody tr:last-child td {
-    border-bottom: none;
-}
+/* STATUS DAS ORDENS DE SERVIÇO */
 
 .status {
-    display: inline-block;
-    padding: 6px 10px;
-    color: #ffc1e4;
     background: #49253f;
-    border: 1px solid #633456;
+    color: #ffc1e4;
+    padding: 6px 10px;
     border-radius: 20px;
     font-size: 12px;
-    white-space: nowrap;
 }
 
-/* ============================
-   10. MENSAGENS
-============================ */
 
 .mensagem {
     display: none;
+    padding: 13px;
     margin: 15px 0;
-    padding: 13px 15px;
     border-radius: 8px;
-    font-size: 14px;
 }
 
 .mensagem.erro {
     display: block;
     color: #ffb6c1;
     background: #351c29;
-    border: 1px solid #73354b;
 }
 
 .mensagem.sucesso {
     display: block;
     color: #9be8be;
     background: #1b3029;
-    border: 1px solid #315c49;
 }
 
-/* ============================
-   11. LOGIN
-============================ */
 
-.pagina-login {
+/* TELA DE LOGIN */
+
+body.pagina-login {
+    margin: 0;
+    padding: 0;
     min-height: 100vh;
-    background: var(--fundo);
+    background: #11101a;
 }
-
-.login-fundo,
-.login-container {
+body.pagina-login main.login-container,
+body.pagina-login main.login-fundo {
     width: 100%;
     max-width: none;
     min-height: 100vh;
     margin: 0;
-    padding: 25px;
-    display: grid;
-    place-items: center;
-    background:
-        radial-gradient(ellipse at top, #382039 0%, transparent 55%),
-        var(--fundo);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.login-caixa {
+body.pagina-login .login-caixa {
     width: 100%;
-    max-width: 440px;
-    padding: 35px;
-    background: var(--painel);
+    max-width: 420px;
+    margin: 0;
+    padding: 30px;
+    background: #1b1826;
     border: 1px solid #4d304c;
-    border-radius: 16px;
-    box-shadow: 0 15px 50px #00000035;
+    border-radius: 15px;
+    box-sizing: border-box;
 }
 
-.login-caixa h1 {
-    color: var(--rosa-claro);
-    text-align: center;
-    font-size: 36px;
+.login-caixa img {
+    display: block;
+    width: 180px;
+    height: auto;
+    margin: 0 auto 25px;
 }
 
-.login-caixa h2 {
-    margin-top: 28px;
-    font-size: 22px;
+
+body.pagina-login .login-caixa form {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
-.login-caixa p {
-    color: var(--texto-suave);
+body.pagina-login .login-caixa .campo {
+    margin-bottom: 15px;
 }
 
-.login-caixa > p {
-    text-align: center;
-}
-
-.login-caixa button {
+body.pagina-login .login-caixa button {
     width: 100%;
     margin-top: 5px;
 }
 
-.descricao {
-    text-align: center;
-    font-size: 14px;
-}
-
-.texto-rodape {
-    margin-top: 22px;
-    font-size: 12px;
-}
-
-/* ============================
-   12. RODAPE
-============================ */
 
 .rodape {
     margin-left: 230px;
     padding: 25px;
-    color: var(--texto-suave);
+    color: #aaa2b8;
     text-align: center;
     font-size: 12px;
-}
-
-/* ============================
-   13. RESPONSIVIDADE
-============================ */
-
-@media (max-width: 1050px) {
-    .cartoes {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .acessos-grid {
-        grid-template-columns: repeat(2, minmax(0, 190px));
-    }
-
-    main {
-        margin-right: 22px;
-        margin-left: 250px;
-    }
-}
-
-@media (max-width: 650px) {
-    header {
-        height: 62px;
-        padding: 0 15px;
-    }
-
-    header h1 {
-        width: auto;
-        font-size: 23px;
-    }
-
-    nav {
-        top: 62px;
-        right: 0;
-        bottom: auto;
-        width: 100%;
-        height: 55px;
-        padding: 5px 8px;
-        flex-direction: row;
-        gap: 4px;
-        overflow-x: auto;
-        border-right: none;
-        border-bottom: 1px solid var(--borda);
-    }
-
-    nav a {
-        min-width: max-content;
-        padding: 9px 11px;
-        font-size: 12px;
-        gap: 6px;
-    }
-
-    nav a::before {
-        width: auto;
-        font-size: 15px;
-    }
-
-    nav a:hover {
-        transform: none;
-    }
-
-    main {
-        margin: 145px 15px 25px;
-    }
-
-    .cartoes {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-    .cartao {
-        padding: 15px;
-    }
-
-    .numero {
-        font-size: 27px;
-    }
-
-    .acessos-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .acesso-card {
-        min-height: 125px;
-        padding: 14px;
-    }
-
-    form {
-        padding: 18px;
-    }
-
-    .rodape {
-        margin-left: 0;
-        padding: 20px 10px;
-    }
-}
-
-@media (max-width: 360px) {
-    .cartoes,
-    .acessos-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Respeita usuarios que preferem menos animacoes. */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-    }
 }
